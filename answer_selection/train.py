@@ -44,7 +44,7 @@ tf.flags.DEFINE_integer("max_word_length", 18, "max word length")
 
 tf.flags.DEFINE_integer("batch_size", 1024, "Batch Size (default: 64)")
 
-tf.flags.DEFINE_integer("num_epochs", 5000000, "Number of training epochs (default: 200)")
+tf.flags.DEFINE_integer("num_epochs", 50, "Number of training epochs (default: 200)")
 tf.flags.DEFINE_integer("evaluate_every", 1000, "Evaluate model on dev set after this many steps (default: 100)")
 tf.flags.DEFINE_integer("checkpoint_every", 1000, "Save model after this many steps (default: 100)")
 
