@@ -34,7 +34,7 @@ def loadVocab(fname):
     idf={}
     with open(fname, 'rt') as f:
         for line in f:
-            line = line.decode('utf-8').strip()
+            line = line.strip()
             fields = line.split('\t')
             term_id = int(fields[0])
             vocab[fields[1]] = term_id
