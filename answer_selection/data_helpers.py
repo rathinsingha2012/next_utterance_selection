@@ -60,7 +60,7 @@ def loadAnswers(fname, vocab, maxlen):
     answers={}
     with open(fname, 'rt') as f:
         for line in f:
-            line = line.decode('utf-8').strip()
+            line = line.strip()
             fields = line.split('\t')
             if len(fields) != 2:
                 print("WRONG LINE: {}".format(line))
@@ -76,7 +76,7 @@ def loadDataset(fname, vocab, maxlen, answers):
     dataset=[]
     with open(fname, 'rt') as f:
         for line in f:
-            line = line.decode('utf-8').strip()
+            line = line.strip()
             fields = line.split('\t')
             q_id = fields[0]
             question_text = fields[1]
