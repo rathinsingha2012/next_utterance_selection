@@ -32,7 +32,7 @@ def loadCharVocab(fname):
 def loadVocab(fname):
     vocab={}
     idf={}
-    with open(fname, 'rt',encoding='utf-16') as f:
+    with open(fname, 'rt') as f:
         for line in f:
             line = line.strip()
             fields = line.split('\t')
