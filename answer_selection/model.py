@@ -58,7 +58,7 @@ def load_word_embeddings(vocab, dim):
 
 
 def lstm_layer(inputs, input_seq_len, rnn_size, dropout_keep_prob, scope, scope_reuse=False):
-    with tf.variable_scope(scope, reuse=scope_reuse) as vs:
+    with tf.compat.v1.variable_scope(scope, reuse=scope_reuse) as vs:
         fw_cell = tf.contrib.rnn.LSTMCell(rnn_size, forget_bias=1.0, state_is_tuple=True, reuse=scope_reuse)
         fw_cell  = tf.contrib.rnn.DropoutWrapper(fw_cell, output_keep_prob=dropout_keep_prob)
         bw_cell = tf.contrib.rnn.LSTMCell(rnn_size, forget_bias=1.0, state_is_tuple=True, reuse=scope_reuse)
