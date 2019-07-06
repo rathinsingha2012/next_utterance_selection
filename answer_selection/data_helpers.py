@@ -36,7 +36,7 @@ def loadVocab(fname):
         for line in f:
             line = line.strip()
             fields = line.split('\t')
-            term_id = int(fields[0])
+            term_id = int(float(fields[0]))
             vocab[fields[1]] = term_id
             total_doc = int(fields[4])
             doc_freq = int(fields[3])
